@@ -1,6 +1,7 @@
-
-
-
+/*
+Escriba una función llamada addOnlyNums que pueda aceptar cualquier cantidad de argumentos (incluidos números o cadenas)
+ y devuelva la suma de solo los números
+ */
 
 let addOnlyNums = (...args) => {
     let sum = 0;
