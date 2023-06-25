@@ -1,0 +1,16 @@
+$sass-prop:(color: #990000, font-weight: bold);
+$sass-value:#006666;
+$sass-code:(
+    background-color: #f8f8f8,
+    width: 500px,
+    height: 500px,
+    border: 1px solid #ccc,
+    margin: 0 auto,
+);
+
+$mixing:(
+    display: flex,
+    justify-content: center,
+    align-items: center,
+    height: 600px,
+)

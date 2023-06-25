@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheet compiled by sass -->
+    <link rel="stylesheet" href="../style/style.css">
+    <!-- icons from font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Fundamentos de Sass Miracle Lab Rosario</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+        <ul>
+            <a href="#mixing" target="_blank" rel="noopener noreferrer" onclick="return confirmar()"><li>Mixing</li></a>
+            <a href="#variable" target="_blank" rel="noopener noreferrer" onclick="return confirmar()"> <li>Variable</li></a>
+            <a href="#nesting" target="_blank" rel="noopener noreferrer" onclick="return confirmar()"><li>Nesting</li></a>
+            <a href="https://sass-lang.com/guide" target="_blank" rel="noopener noreferrer" onclick="return confirmar()"><li>Learn more</li></a>
+        </ul>
+    </nav>
+    </header>
+    <main>
+        <section class="mixing"  id="mixing">
+            <article>
+                <h2>Mixins</h2>
+                <p>
+                    Some things in CSS are a bit tedious to write, especially with CSS3 and the many vendor prefixes that exist. A mixin lets you make 
+                    groups of CSS declarations that you want to reuse throughout your site. It helps keep your Sass very DRY. You can even pass in values 
+                    to make your mixin more flexible. Here's an example for theme.
+                </p>
+                <div class="sass-code">
+                    @mixin theme($theme: <p class="sass-value">#DarkGray</p>) {
+                        <p class="sass-prop">background</p>: $theme;
+                        <p class="sass-prop">box-shadow</p>: 0 0 1px rgba($theme, .25);
+                        <p class="sass-prop">color</p>: <p class="sass-value">#fff</p>;
+                      }
+                      
+                      <p class="sass-class">.info</p> {
+                        @include theme;
+                      }
+                      <p class="sass-class">.alert</p> {
+                        @include theme($theme: <p class="sass-value">DarkRed</p>);
+                      }
+                      <p class="sass-class">.success</p> {
+                        @include theme($theme: <p class="sass-value">DarkGreen</p>);
+                      }
+                      
+
+                </div>
+            </article>
+        </section>
+        <section class="variable" id="variable"></section>
+        <section class="nesting" id="nesting"></section>
+        <section class="learn-more"  id="learn-more"></section>
+
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="social-icons">
+              <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="rights">Todos los derechos reservados &copy; 2023</p>
+          </div>
+        
+    </footer>
+    <!-- confirmation prompt to ask the user to confirm before redirecting them to an external link. -->
+    <script src="../index.js"></script>
+</body>
+</html>
