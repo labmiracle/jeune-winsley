@@ -1,0 +1,26 @@
+.mixing{
+    width:70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    article{
+        h2{
+            text-align: center;
+        }
+    }
+    .sass-code{
+        display: flex;
+        flex-wrap: nowrap;
+        align-content: flex-end;
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+        .sass-prop{
+            color: #cf1666
+        }
+    }
+}
+

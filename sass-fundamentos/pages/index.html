@@ -14,9 +14,9 @@
     <header>
         <nav class="nav-container">
         <ul>
-            <a href="#mixing" target="_blank" rel="noopener noreferrer" onclick="return confirmar()"><li>Mixing</li></a>
-            <a href="#variable" target="_blank" rel="noopener noreferrer" onclick="return confirmar()"> <li>Variable</li></a>
-            <a href="#nesting" target="_blank" rel="noopener noreferrer" onclick="return confirmar()"><li>Nesting</li></a>
+            <a href="#mixing" target="_blank" rel="noopener noreferrer"><li>Mixing</li></a>
+            <a href="#variable" target="_blank" rel="noopener noreferrer"> <li>Variable</li></a>
+            <a href="#nesting" target="_blank" rel="noopener noreferrer"><li>Nesting</li></a>
             <a href="https://sass-lang.com/guide" target="_blank" rel="noopener noreferrer" onclick="return confirmar()"><li>Learn more</li></a>
         </ul>
     </nav>
@@ -31,20 +31,21 @@
                     to make your mixin more flexible. Here's an example for theme.
                 </p>
                 <div class="sass-code">
-                    @mixin theme($theme: <p class="sass-value">#DarkGray</p>) {
-                        <p class="sass-prop">background</p>: $theme;
-                        <p class="sass-prop">box-shadow</p>: 0 0 1px rgba($theme, .25);
-                        <p class="sass-prop">color</p>: <p class="sass-value">#fff</p>;
-                      }
+                  
+                  <p>@mixin theme($theme: <span class="sass-value">#DarkGray</span>){ </p>
+                    <p> <span class="sass-prop">background</span>: $theme;</p>
+                        <span="sass-prop">box-shadow</span=>: 0 0 1px rgba($theme, .25);
+                        <p><span class="sass-prop">color</span>: <span class="sass-value">#fff</span>;
+                      }</p>
                       
                       <p class="sass-class">.info</p> {
                         @include theme;
                       }
-                      <p class="sass-class">.alert</p> {
-                        @include theme($theme: <p class="sass-value">DarkRed</p>);
-                      }
+                      <p class="sass-class">.alert {
+                        @include theme($theme: <span class="sass-value">DarkRed</span>);
+                      } </p>
                       <p class="sass-class">.success</p> {
-                        @include theme($theme: <p class="sass-value">DarkGreen</p>);
+                        @include theme($theme: <span  class="sass-value">DarkGreen</span>);
                       }
                       
 

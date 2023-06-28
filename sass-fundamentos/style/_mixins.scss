@@ -1,0 +1,22 @@
+@mixin social-icons(){
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-icons{
+    @include social-icons;
+    .social-icon{
+        font-size: 2rem;
+        color: #fff;
+        
+    }
+
+   
+    
+}
+
+.rights{
+    font-size: 0.8rem;
+    color: #fff;
+}
