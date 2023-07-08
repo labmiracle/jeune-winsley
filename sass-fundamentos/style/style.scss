@@ -33,10 +33,6 @@ body{
        }
      }
 
-// Escriba un@mixin(como elmixin box-shadowdel ejemplo).
-// Algunos casos que podría probarson: unmixinque agrega un prefijo
-//  de proveedor, unmixinque agrega un margen fijo y relleno(padding), y unmixinque agrega propiedades de borde.
-
 @mixin prefix($property, $value){
     -webkit-#{$property}: $value;
     -moz-#{$property}: $value;
