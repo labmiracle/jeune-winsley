@@ -38,20 +38,54 @@
 
 
 const characters = [
-    {name: 'Luke Skywalker', height: '172',mass: '77',
-    eye_color: 'blue',
+    {name: 'Luke Skywalker', height: '172',mass: '77',eye_color: 'blue',
     gender: 'male',},
     {name: 'Darth Vader',height: '202',mass: '136',eye_color: 'yellow',gender: 'male',},
     {name: 'Leia Organa',height: '150',mass: '49',eye_color: 'brown',gender: 'female',},
     {name: 'Anakin Skywalker',height: '188',mass: '84',eye_color: 'blue',gender: 'male',}
 ];
 
-let caractersName= [];
-let caractersHeigth=[];
+let charactersName= [];
+let charactersHeigth=[];
 let nameHeigth = [];
+let charactersEyesColors= [];
 let caractersMap= characters.map((character)=>{
-    caractersName.push(character.name)  
-    caractersHeigth.push(character.height)  
+    charactersName.push(character.name)  
+    charactersHeigth.push(character.height)  
+    charactersEyesColors.push(character.eye_color)
 })
+console.log("............................................>")
+nameHeigth =charactersHeigth.concat(charactersName)
 
-nameHeigth =caractersHeigth.concat(caractersName)
+let charactersPerColor = charactersEyesColors.forEach(indexOfArray => {
+    console.log(`The ${indexOfArray} has ${indexOfArray.length} characters`)    
+});
+console.log("............................................>")
+
+
+//Función reduce1 solution.
+console.log("............................................>")
+const totalMass = characters.reduce((accumulator, character) => {
+    return accumulator + parseInt(character.mass);
+}, 0);
+console.log("Total Mass:", totalMass);
+ 
+const alturaTotal = characters.reduce((accumulator, character)=>{
+    return accumulator + parseInt(character.height);
+},0)
+
+console.log("Total Heigth: ", alturaTotal);
+console.log("............................................>")
+
+const charactersNameTotal = characters.reduce((accumulator, character)=>{
+    return accumulator + (character.name).length;
+},0)
+console.log("............................................>")
+console.log("The total of characters is :", charactersNameTotal)
+
+console.log("............................................>")
+
+
+
+
+
