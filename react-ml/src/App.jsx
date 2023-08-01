@@ -6,6 +6,8 @@ import Title from './exercices/props/Title'
 import Text from "./exercices/props/Text"
 import List from './exercices/props/List'
 import Props from './exercices/props/Props'
+import Counter from './exercices/state/Counter'
+import EmptyString from "./exercices/state/EmptyString"
 
 
  
@@ -15,8 +17,10 @@ function App() {
     <>
     <BrowserRouter>
       <Routes>
-        <Route path='/nav' element={<Nav />} />     
-        <Route path='/props' element={<Props />} />     
+        {/* <Route path='/nav' element={<Nav />} />     
+        <Route path='/props' element={<Props />} />   
+        <Route path='/state' element={<Counter />} />     */}
+        <Route path='/emptyString' element={<EmptyString />} />
       </Routes>
     </BrowserRouter> 
     </>
