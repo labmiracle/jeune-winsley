@@ -10,6 +10,7 @@ import Counter from './exercices/state/Counter'
 import EmptyString from "./exercices/state/EmptyString"
 import FetchingData from "./exercices/eventt/FetchingData"
 import PintaTexto from "./exercices/eventt/PintaTexto"
+import Select from './exercices/eventt/Select'
 
 
 
@@ -26,7 +27,9 @@ function App() {
         <Route path='/state' element={<Counter />} />     */}
         {/* <Route path='/emptyString' element={<EmptyString />} />
         <Route path ="/fetchingdata" element={<FetchingData />}/> */}
-        <Route path ="/pintatexto" element={<PintaTexto />}/>
+        {/* <Route path ="/pintatexto" element={<PintaTexto />}/> */}
+        <Route path ="/select" element={<Select />}/>
+
       </Routes>
     </BrowserRouter> 
     </>
