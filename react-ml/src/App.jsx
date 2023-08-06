@@ -11,6 +11,10 @@ import EmptyString from "./exercices/state/EmptyString"
 import FetchingData from "./exercices/eventt/FetchingData"
 import PintaTexto from "./exercices/eventt/PintaTexto"
 import Select from './exercices/eventt/Select'
+import ProtectedRoutes from './exercices/eventt/ProtectedRoutes'
+import ConditionalRendering from './exercices/eventt/ConditionalRendering'
+import UserNotLoggedIn from './exercices/eventt/UserNotLoggedIn'
+import LoggedInUser from './exercices/eventt/LoggedInUser'
 
 
 
@@ -21,6 +25,7 @@ function App() {
     <>
    
     <BrowserRouter>
+      
       <Routes>
         {/* <Route path='/nav' element={<Nav />} />     
         <Route path='/props' element={<Props />} />   
@@ -28,8 +33,12 @@ function App() {
         {/* <Route path='/emptyString' element={<EmptyString />} />
         <Route path ="/fetchingdata" element={<FetchingData />}/> */}
         {/* <Route path ="/pintatexto" element={<PintaTexto />}/> */}
-        <Route path ="/select" element={<Select />}/>
+        {/* <Route path ="/select" element={<Select />}/> */}
+        <Route element={<ProtectedRoutes/>}>
+            <Route path ="/usuario-identificado" element={<LoggedInUser/>}/>
+        </Route>
 
+        <Route path ="/usuario-anonimo" element={<UserNotLoggedIn/>}/>
       </Routes>
     </BrowserRouter> 
     </>
