@@ -15,6 +15,7 @@ import ProtectedRoutes from './exercices/eventt/ProtectedRoutes'
 import ConditionalRendering from './exercices/eventt/ConditionalRendering'
 import UserNotLoggedIn from './exercices/eventt/UserNotLoggedIn'
 import LoggedInUser from './exercices/eventt/LoggedInUser'
+import Refs from './exercices/refs/Refs'
 
 
 
@@ -23,6 +24,7 @@ function App() {
  
    return (
     <>
+    <Refs/>
    
     <BrowserRouter>
       
