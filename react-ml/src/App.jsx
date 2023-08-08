@@ -16,6 +16,8 @@ import ConditionalRendering from './exercices/eventt/ConditionalRendering'
 import UserNotLoggedIn from './exercices/eventt/UserNotLoggedIn'
 import LoggedInUser from './exercices/eventt/LoggedInUser'
 import Refs from './exercices/refs/Refs'
+import LanguageProvider from './exercices/contextt/LanguageProvider.jsx'
+import MainTex from './exercices/contextt/MainTex'
 
 
 
@@ -23,27 +25,28 @@ import Refs from './exercices/refs/Refs'
 function App() {
  
    return (
-    <>
-    <Refs/>
-   
-    <BrowserRouter>
-      
-      <Routes>
-        {/* <Route path='/nav' element={<Nav />} />     
-        <Route path='/props' element={<Props />} />   
-        <Route path='/state' element={<Counter />} />     */}
-        {/* <Route path='/emptyString' element={<EmptyString />} />
-        <Route path ="/fetchingdata" element={<FetchingData />}/> */}
-        {/* <Route path ="/pintatexto" element={<PintaTexto />}/> */}
-        {/* <Route path ="/select" element={<Select />}/> */}
-        <Route element={<ProtectedRoutes/>}>
-            <Route path ="/usuario-identificado" element={<LoggedInUser/>}/>
-        </Route>
+    <LanguageProvider>      
+        <div>
+          <MainTex/>
+           {/* <Refs/>    */}
+        <BrowserRouter>      
+          <Routes>
+            {/* <Route path='/nav' element={<Nav />} />     
+            <Route path='/props' element={<Props />} />   
+            <Route path='/state' element={<Counter />} />     */}
+            {/* <Route path='/emptyString' element={<EmptyString />} />
+            <Route path ="/fetchingdata" element={<FetchingData />}/> */}
+            {/* <Route path ="/pintatexto" element={<PintaTexto />}/> */}
+            {/* <Route path ="/select" element={<Select />}/> */}
+            <Route element={<ProtectedRoutes/>}>
+                <Route path ="/usuario-identificado" element={<LoggedInUser/>}/>
+            </Route>
+            <Route path ="/usuario-anonimo" element={<UserNotLoggedIn/>}/>
 
-        <Route path ="/usuario-anonimo" element={<UserNotLoggedIn/>}/>
-      </Routes>
-    </BrowserRouter> 
-    </>
+          </Routes>
+        </BrowserRouter> 
+        </div>
+    </LanguageProvider>
   )
 }
 
