@@ -6,7 +6,6 @@ const server = http.createServer((req, res) => {
     res.end();
     return
   }
-
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/html');
   res.write("<html><head><title> Node js server bing bang</title></head></html>");
