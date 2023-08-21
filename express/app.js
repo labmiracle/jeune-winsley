@@ -1,9 +1,16 @@
 const express = require('express');
 const app = express();
-app.get('/yo', (req, res) => {
-  res.send('Hellooo');
+
+const logURLMiddleware = (req, res, next) => {
+  console.log(`URL actual: ${req.url}`);
+  next(); 
+};
+app.use(logURLMiddleware);
+app.get('/', (req, res) => {
+  res.send('Hello I am heres');
 });
-const puerto = 4567;
-app.listen(puerto, () => {
-  console.log(`Servidor Express escuchando en el puerto ${puerto}`);
+
+const port = 4567;
+app.listen(port, () => {
+  console.log(`Servidor Express escuchando en el puerto ${port}`);
 });
